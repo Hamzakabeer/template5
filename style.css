@@ -1,0 +1,269 @@
+\/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #F6F2FF;
+  line-height: 1.5;
+}
+
+header {
+  background-color: transparent;
+  padding: 20px 40px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  width: 405px;
+  height: 19px;
+  
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.sign-in {
+  text-decoration: none;
+  background: linear-gradient(to right,#DA22FF ,#9733EE );
+  color: white;
+  width: 60px;
+  height: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+ 
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 47px;
+  width: 555px;
+  height: 183px;
+  font-weight: 700;
+  line-height: 60.94px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  color: #ff5f7e;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 21.09px;
+  width: 470px;
+  height: 42px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  border-radius: 30px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-wrapper input[type="email"] {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px; /* Match wrapper radius */
+  outline: none;
+  width: 470px;
+  height: 25px;
+
+  transition: all 0.3s ease;
+}
+
+.input-wrapper input[type="email"]:focus {
+  box-shadow: 0 0 8px rgba(167, 94, 255, 0.5); 
+}
+
+.input-wrapper button {
+  position: absolute;
+  right: 0;
+  width: 115.49px;
+  height: 43px;
+  background: linear-gradient(to right,#DA22FF ,#9733EE );
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px; /* Rounded button */
+  transition: all 0.3s ease;
+}
+
+.input-wrapper button:hover {
+  background-color: #9548ff;
+}
+
+
+.hero-image img {
+  width: 100%;
+  margin-top: 100px;
+  max-width: 500px;
+}
+
+/* Responsive Design */
+/* Medium Screens (Tablets) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text {
+    flex: 1 1 auto;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image img {
+    margin-top: 20px;
+  }
+
+  .input-wrapper input[type="email"] {
+    width: 200px;
+  }
+}
+
+/* Small Screens (Mobile) */
+@media screen and (max-width: 480px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    display: none; /* Hide links on mobile for simplicity */
+  }
+
+  .sign-in {
+    margin: 10px auto;
+    display: block;
+  }
+
+  .hero-section {
+    padding: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .input-wrapper input[type="email"] {
+    width: 180px;
+  }
+
+  .input-wrapper button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra Small Screens (300px and below) */
+@media screen and (max-width: 300px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 5px 10px;
+  }
+
+  .sign-in {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+
+  .hero-section {
+    padding: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .input-wrapper input[type="email"] {
+    width: 150px;
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .input-wrapper button {
+    font-size: 0.8rem;
+    padding: 8px;
+    margin-top: 10px;
+  }
+
+  .hero-image img {
+    margin-top: 15px;
+    max-width: 100%;
+  }
+}
