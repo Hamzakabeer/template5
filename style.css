@@ -150,6 +150,7 @@ header {
   max-width: 500px;
 }
 
+
 /* Responsive Design */
 /* Medium Screens (Tablets) */
 @media screen and (max-width: 768px) {
@@ -158,6 +159,7 @@ header {
   }
 
   .nav-links {
+    margin-left: 60px;
     gap: 10px;
   }
 
@@ -176,7 +178,7 @@ header {
   }
 
   .hero-image img {
-    margin-top: 20px;
+    margin-top: 50px;
   }
 
   .input-wrapper input[type="email"] {

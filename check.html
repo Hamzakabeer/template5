@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Redirect</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #1a1a1a;
+        }
+        .redirect-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+            color: white;
+            background: #FF5733;
+            padding: 20px 40px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .redirect-box:hover {
+            background: #C70039;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        #animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,1) 80%);
+            display: none;
+            animation: zoomOut 2s forwards;
+        }
+        @keyframes zoomOut {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-box" id="redirectBtn">Click to Travel 🚀</div>
+    <div id="animation"></div>
+
+    <script>
+        const redirectBtn = document.getElementById('redirectBtn');
+        const animationDiv = document.getElementById('animation');
+
+        redirectBtn.addEventListener('click', () => {
+            // Start the animation
+            animationDiv.style.display = 'block';
+
+            // Redirect after animation ends
+            setTimeout(() => {
+                window.location.href = 'https://example.com'; // Replace with your target website URL
+            }, 2000); // Match with animation duration
+        });
+    </script>
+</body>
+</html>
